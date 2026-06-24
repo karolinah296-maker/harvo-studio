@@ -1,0 +1,15 @@
+# Robocze profile przeglądarki i zrzuty z testów
+.edge-profile*/
+edge-shot-profile/
+audit-*.png
+havro-*.png
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Tymczasowe kopie i logi
+*.log
+*.tmp
+*.bak

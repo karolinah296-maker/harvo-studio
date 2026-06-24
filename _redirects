@@ -1,0 +1,6 @@
+/oferta     /oferta.html     200
+/portfolio  /portfolio.html  200
+/polityka-prywatnosci.html  /polityka-prywatnosci  301
+/polityka-prywatnosci  /polityka-prywatnosci.html  200
+/dziekuje   /dziekuje.html   200
+/kontakt    /index.html#contact  301
