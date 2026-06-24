@@ -4250,7 +4250,7 @@ a {
   text-transform: uppercase;
 }
 
-.havro-section {
+.harvo-section {
   position: relative;
   overflow: hidden;
   padding: 120px 0 130px;
@@ -4262,7 +4262,7 @@ a {
   color: var(--white);
 }
 
-.havro-section::before {
+.harvo-section::before {
   position: absolute;
   inset: 0;
   content: "";
@@ -4275,7 +4275,7 @@ a {
   mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
 }
 
-.havro-inner {
+.harvo-inner {
   position: relative;
   z-index: 1;
   display: grid;
@@ -4286,14 +4286,14 @@ a {
   margin: 0 auto;
 }
 
-.havro-visual {
+.harvo-visual {
   position: relative;
   min-height: clamp(500px, 48vw, 680px);
   display: grid;
   place-items: center;
 }
 
-.havro-backdrop-word {
+.harvo-backdrop-word {
   position: absolute;
   left: -9%;
   top: 50%;
@@ -4315,7 +4315,7 @@ a {
     transform 900ms cubic-bezier(0.2, 0.82, 0.2, 1);
 }
 
-.havro-photo-card {
+.harvo-photo-card {
   position: relative;
   z-index: 2;
   width: min(64%, 430px);
@@ -4338,7 +4338,7 @@ a {
   transition-delay: 120ms;
 }
 
-.havro-photo-card::before {
+.harvo-photo-card::before {
   position: absolute;
   inset: -28px;
   z-index: -1;
@@ -4351,7 +4351,7 @@ a {
   opacity: 0.62;
 }
 
-.havro-photo-placeholder {
+.harvo-photo-placeholder {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -4364,7 +4364,7 @@ a {
     linear-gradient(180deg, #191820 0%, #070708 78%);
 }
 
-.havro-photo-placeholder img {
+.harvo-photo-placeholder img {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -4376,15 +4376,15 @@ a {
   filter: saturate(0.96) contrast(1.04) brightness(0.92);
 }
 
-.havro-photo-placeholder::before {
+.harvo-photo-placeholder::before {
   display: none;
 }
 
-.havro-photo-placeholder::after {
+.harvo-photo-placeholder::after {
   display: none;
 }
 
-.havro-photo-placeholder span {
+.harvo-photo-placeholder span {
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -4395,7 +4395,7 @@ a {
   opacity: 0.78;
 }
 
-.havro-held-word {
+.harvo-held-word {
   position: absolute;
   left: 50%;
   bottom: 13%;
@@ -4420,7 +4420,7 @@ a {
   white-space: nowrap;
 }
 
-.havro-held-word::before {
+.harvo-held-word::before {
   position: absolute;
   inset: -14px -20px -12px;
   z-index: -1;
@@ -4436,7 +4436,7 @@ a {
   backdrop-filter: blur(4px);
 }
 
-.havro-copy > span {
+.harvo-copy > span {
   display: inline-block;
   margin-bottom: 20px;
   color: rgba(255, 255, 255, 0.46);
@@ -4446,7 +4446,7 @@ a {
   text-transform: uppercase;
 }
 
-.havro-copy h2 {
+.harvo-copy h2 {
   max-width: 590px;
   margin: 0;
   font-family: var(--font-display);
@@ -4456,7 +4456,7 @@ a {
   letter-spacing: 0;
 }
 
-.havro-copy p {
+.harvo-copy p {
   max-width: 610px;
   margin: 26px 0 0;
   color: rgba(247, 244, 240, 0.68);
@@ -4464,7 +4464,7 @@ a {
   line-height: 1.76;
 }
 
-.havro-features {
+.harvo-features {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px 18px;
@@ -4474,7 +4474,7 @@ a {
   list-style: none;
 }
 
-.havro-features li {
+.harvo-features li {
   position: relative;
   min-height: 44px;
   padding: 12px 14px 12px 42px;
@@ -4487,7 +4487,7 @@ a {
   line-height: 1.35;
 }
 
-.havro-features li::before {
+.harvo-features li::before {
   position: absolute;
   left: 16px;
   top: 50%;
@@ -4497,7 +4497,7 @@ a {
   transform: translateY(-50%);
 }
 
-.havro-stats {
+.harvo-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
@@ -4505,7 +4505,7 @@ a {
   margin-top: 26px;
 }
 
-.havro-stats div {
+.harvo-stats div {
   min-height: 112px;
   padding: 20px 18px;
   border: 1px solid rgba(255, 255, 255, 0.11);
@@ -4515,7 +4515,7 @@ a {
     rgba(255, 255, 255, 0.035);
 }
 
-.havro-stats strong {
+.harvo-stats strong {
   display: block;
   color: transparent;
   background: linear-gradient(100deg, var(--pink), var(--gold));
@@ -4527,7 +4527,7 @@ a {
   line-height: 0.95;
 }
 
-.havro-stats span {
+.harvo-stats span {
   display: block;
   margin-top: 12px;
   color: rgba(255, 255, 255, 0.62);
@@ -4536,11 +4536,11 @@ a {
   line-height: 1.42;
 }
 
-.havro-copy > span,
-.havro-copy h2,
-.havro-copy p,
-.havro-features li,
-.havro-stats div {
+.harvo-copy > span,
+.harvo-copy h2,
+.harvo-copy p,
+.harvo-features li,
+.harvo-stats div {
   opacity: 0;
   filter: blur(12px);
   transform: translateY(24px);
@@ -4550,71 +4550,71 @@ a {
     transform 720ms cubic-bezier(0.2, 0.82, 0.2, 1);
 }
 
-.havro-copy.is-visible > span,
-.havro-copy.is-visible h2,
-.havro-copy.is-visible p,
-.havro-copy.is-visible .havro-features li,
-.havro-copy.is-visible .havro-stats div {
+.harvo-copy.is-visible > span,
+.harvo-copy.is-visible h2,
+.harvo-copy.is-visible p,
+.harvo-copy.is-visible .harvo-features li,
+.harvo-copy.is-visible .harvo-stats div {
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
 }
 
-.havro-copy h2 {
+.harvo-copy h2 {
   transition-delay: 90ms;
 }
 
-.havro-copy p {
+.harvo-copy p {
   transition-delay: 180ms;
 }
 
-.havro-features li:nth-child(1) {
+.harvo-features li:nth-child(1) {
   transition-delay: 270ms;
 }
 
-.havro-features li:nth-child(2) {
+.harvo-features li:nth-child(2) {
   transition-delay: 330ms;
 }
 
-.havro-features li:nth-child(3) {
+.harvo-features li:nth-child(3) {
   transition-delay: 390ms;
 }
 
-.havro-features li:nth-child(4) {
+.harvo-features li:nth-child(4) {
   transition-delay: 450ms;
 }
 
-.havro-features li:nth-child(5) {
+.harvo-features li:nth-child(5) {
   transition-delay: 510ms;
 }
 
-.havro-features li:nth-child(6) {
+.harvo-features li:nth-child(6) {
   transition-delay: 570ms;
 }
 
-.havro-stats div:nth-child(1) {
+.harvo-stats div:nth-child(1) {
   transition-delay: 660ms;
 }
 
-.havro-stats div:nth-child(2) {
+.harvo-stats div:nth-child(2) {
   transition-delay: 720ms;
 }
 
-.havro-stats div:nth-child(3) {
+.harvo-stats div:nth-child(3) {
   transition-delay: 780ms;
 }
 
-.havro-visual.is-visible .havro-backdrop-word {
+.harvo-visual.is-visible .harvo-backdrop-word {
   opacity: 0.42;
   transform: translate(0, -50%) scale(1);
 }
 
-.havro-visual.is-visible .havro-photo-card {
+.harvo-visual.is-visible .harvo-photo-card {
   opacity: 1;
   transform: translateY(0) scale(1) rotate(-2deg);
 }
 
-.havro-visual.is-visible .havro-held-word {
+.harvo-visual.is-visible .harvo-held-word {
   opacity: 1;
   transform: translateX(-50%) translateY(0) rotate(-1.5deg) scale(1);
 }
@@ -7709,24 +7709,24 @@ a {
     max-width: 680px;
   }
 
-  .havro-inner {
+  .harvo-inner {
     grid-template-columns: 1fr;
     gap: 42px;
   }
 
-  .havro-visual {
+  .harvo-visual {
     min-height: 560px;
   }
 
-  .havro-photo-card {
+  .harvo-photo-card {
     width: min(58%, 420px);
     margin-right: 12%;
   }
 
-  .havro-copy h2,
-  .havro-copy p,
-  .havro-features,
-  .havro-stats {
+  .harvo-copy h2,
+  .harvo-copy p,
+  .harvo-features,
+  .harvo-stats {
     max-width: 760px;
   }
 
@@ -7909,65 +7909,65 @@ a {
     font-size: 14px;
   }
 
-  .havro-section {
+  .harvo-section {
     padding: 82px 0 90px;
   }
 
-  .havro-inner {
+  .harvo-inner {
     width: min(calc(100% - 32px), 1360px);
     gap: 34px;
   }
 
-  .havro-visual {
+  .harvo-visual {
     min-height: 430px;
   }
 
-  .havro-backdrop-word {
+  .harvo-backdrop-word {
     left: 50%;
     font-size: clamp(74px, 22vw, 104px);
     transform: translate(-50%, -50%);
   }
 
-  .havro-photo-card {
+  .harvo-photo-card {
     width: min(78%, 330px);
     margin-right: auto;
     margin-left: auto;
     border-radius: 20px;
   }
 
-  .havro-held-word {
+  .harvo-held-word {
     bottom: 11%;
     font-size: clamp(38px, 12vw, 56px);
   }
 
-  .havro-held-word::before {
+  .harvo-held-word::before {
     inset: -10px -15px -9px;
   }
 
-  .havro-copy h2 {
+  .harvo-copy h2 {
     font-size: clamp(28px, 8.2vw, 36px);
   }
 
-  .havro-copy p {
+  .harvo-copy p {
     font-size: 15px;
   }
 
-  .havro-features {
+  .harvo-features {
     grid-template-columns: 1fr;
     gap: 10px;
   }
 
-  .havro-features li {
+  .harvo-features li {
     min-height: 40px;
     border-radius: 18px;
     font-size: 12px;
   }
 
-  .havro-stats {
+  .harvo-stats {
     grid-template-columns: 1fr;
   }
 
-  .havro-stats div {
+  .harvo-stats div {
     min-height: 92px;
   }
 

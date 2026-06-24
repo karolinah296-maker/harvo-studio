@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="havro" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+    <linearGradient id="harvo" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
       <stop stop-color="#f20a8c"/>
       <stop offset="0.55" stop-color="#ff5d71"/>
       <stop offset="1" stop-color="#ffb64d"/>
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="#050506"/>
-  <path d="M15 46V18h7v11h20V18h7v28h-7V35H22v11h-7Z" fill="url(#havro)"/>
+  <path d="M15 46V18h7v11h20V18h7v28h-7V35H22v11h-7Z" fill="url(#harvo)"/>
 </svg>
