@@ -20,8 +20,8 @@ Harvo Studio pracuje lokalnie i zdalnie. Obsługiwane lokalizacje: Jarosław, Rz
 ## Pakiety
 
 - START Landing page: od 1699 zł brutto
-- BIZNES Strona firmowa: od 2990 zł brutto
-- PREMIUM Rozbudowana strona: od 4590 zł brutto
+- BIZNES Strona firmowa: od 3690 zł brutto
+- PREMIUM Rozbudowana strona: od 5990 zł brutto
 
 ## Kontakt
 
