@@ -168,3 +168,84 @@ if (requestedProject && projectSelect) {
   const matchingOption = [...projectSelect.options].find((option) => option.value === requestedProject);
   if (matchingOption) projectSelect.value = requestedProject;
 }
+
+const videoSlider = document.querySelector("[data-video-slider]");
+
+if (videoSlider) {
+  const sliderSection = videoSlider.closest(".video-portfolio-section");
+  const slides = [...videoSlider.querySelectorAll(".video-reel")];
+  const dots = [...sliderSection.querySelectorAll("[data-video-slide]")];
+  const currentLabel = sliderSection.querySelector("[data-video-current]");
+  const previousButton = sliderSection.querySelector("[data-video-prev]");
+  const nextButton = sliderSection.querySelector("[data-video-next]");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let currentSlide = 0;
+  let scrollFrame;
+
+  const setActiveSlide = (index) => {
+    const nextIndex = Math.max(0, Math.min(index, slides.length - 1));
+    currentSlide = nextIndex;
+
+    if (currentLabel) currentLabel.textContent = String(nextIndex + 1).padStart(2, "0");
+
+    dots.forEach((dot, dotIndex) => {
+      const isActive = dotIndex === nextIndex;
+      dot.classList.toggle("is-active", isActive);
+      if (isActive) dot.setAttribute("aria-current", "true");
+      else dot.removeAttribute("aria-current");
+    });
+
+    if (previousButton) previousButton.disabled = nextIndex === 0;
+    if (nextButton) nextButton.disabled = nextIndex === slides.length - 1;
+
+    slides.forEach((slide, slideIndex) => {
+      if (slideIndex !== nextIndex) slide.querySelector("video")?.pause();
+    });
+  };
+
+  const scrollToSlide = (index) => {
+    const nextIndex = Math.max(0, Math.min(index, slides.length - 1));
+    const slide = slides[nextIndex];
+    if (!slide) return;
+
+    const trackRect = videoSlider.getBoundingClientRect();
+    const slideRect = slide.getBoundingClientRect();
+    const targetLeft = videoSlider.scrollLeft + slideRect.left - trackRect.left;
+
+    videoSlider.scrollTo({
+      left: targetLeft,
+      behavior: reducedMotion.matches ? "auto" : "smooth",
+    });
+    setActiveSlide(nextIndex);
+  };
+
+  const syncSlideFromScroll = () => {
+    window.cancelAnimationFrame(scrollFrame);
+    scrollFrame = window.requestAnimationFrame(() => {
+      const trackLeft = videoSlider.getBoundingClientRect().left;
+      const closestIndex = slides.reduce((closest, slide, index) => {
+        const distance = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+        return distance < closest.distance ? { index, distance } : closest;
+      }, { index: 0, distance: Number.POSITIVE_INFINITY }).index;
+
+      if (closestIndex !== currentSlide) setActiveSlide(closestIndex);
+    });
+  };
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => scrollToSlide(Number(dot.dataset.videoSlide)));
+  });
+
+  previousButton?.addEventListener("click", () => scrollToSlide(currentSlide - 1));
+  nextButton?.addEventListener("click", () => scrollToSlide(currentSlide + 1));
+
+  videoSlider.addEventListener("scroll", syncSlideFromScroll, { passive: true });
+  videoSlider.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    event.preventDefault();
+    scrollToSlide(currentSlide + (event.key === "ArrowRight" ? 1 : -1));
+  });
+
+  window.addEventListener("resize", syncSlideFromScroll, { passive: true });
+  setActiveSlide(0);
+}

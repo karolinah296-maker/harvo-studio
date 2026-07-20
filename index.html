@@ -559,33 +559,20 @@
             </div>
           </header>
 
-          <div class="video-reels" aria-label="Portfolio spotów reklamowych HARVO">
-            <article class="video-reel reveal-on-scroll">
-              <div class="video-reel-frame">
-                <video controls playsinline muted preload="none" poster="assets/video-spots/01-reklama-bizuterii.jpg" aria-label="Reklama biżuterii">
-                  <source src="assets/video-spots/01-reklama-bizuterii.mp4" type="video/mp4">
-                </video>
-                <span class="video-reel-index">01</span>
-              </div>
-              <div class="video-reel-caption"><h3>Reklama biżuterii</h3><span>Produkt • Social media</span></div>
-            </article>
-
-            <article class="video-reel reveal-on-scroll">
-              <div class="video-reel-frame">
-                <video controls playsinline muted preload="none" poster="assets/video-spots/02-reklama-rolet.jpg" aria-label="Reklama rolet">
-                  <source src="assets/video-spots/02-reklama-rolet.mp4" type="video/mp4">
-                </video>
-                <span class="video-reel-index">02</span>
-              </div>
-              <div class="video-reel-caption"><h3>Reklama rolet</h3><span>Marka • Kampania</span></div>
-            </article>
-
+          <div
+            class="video-reels"
+            id="video-reels-track"
+            data-video-slider
+            tabindex="0"
+            aria-label="Portfolio spotów reklamowych HARVO"
+            aria-describedby="video-slider-hint"
+          >
             <article class="video-reel reveal-on-scroll">
               <div class="video-reel-frame">
                 <video controls playsinline muted preload="none" poster="assets/video-spots/03-spot-harvo.jpg" aria-label="Spot reklamowy HARVO">
                   <source src="assets/video-spots/03-spot-harvo.mp4" type="video/mp4">
                 </video>
-                <span class="video-reel-index">03</span>
+                <span class="video-reel-index">01</span>
               </div>
               <div class="video-reel-caption"><h3>Spot HARVO</h3><span>Studio • Wizerunek</span></div>
             </article>
@@ -595,7 +582,7 @@
                 <video controls playsinline muted preload="none" poster="assets/video-spots/04-okladka-dokladna.jpg" aria-label="Prezentacja strony internetowej">
                   <source src="assets/video-spots/04-prezentacja-strony.mp4" type="video/mp4">
                 </video>
-                <span class="video-reel-index">04</span>
+                <span class="video-reel-index">02</span>
               </div>
               <div class="video-reel-caption"><h3>Prezentacja strony</h3><span>WWW • Premiera</span></div>
             </article>
@@ -605,12 +592,52 @@
                 <video controls playsinline muted preload="none" poster="assets/video-spots/05-okladka-dokladna.jpg" aria-label="Spot strony ArtPawilony">
                   <source src="assets/video-spots/05-spot-pawilony.mp4" type="video/mp4">
                 </video>
-                <span class="video-reel-index">05</span>
+                <span class="video-reel-index">03</span>
               </div>
               <div class="video-reel-caption"><h3>Spot ArtPawilony</h3><span>Realizacja • Promocja</span></div>
             </article>
+
+            <article class="video-reel reveal-on-scroll">
+              <div class="video-reel-frame">
+                <video controls playsinline muted preload="none" poster="assets/video-spots/01-reklama-bizuterii.jpg" aria-label="Reklama biżuterii">
+                  <source src="assets/video-spots/01-reklama-bizuterii.mp4" type="video/mp4">
+                </video>
+                <span class="video-reel-index">04</span>
+              </div>
+              <div class="video-reel-caption"><h3>Reklama biżuterii</h3><span>Produkt • Social media</span></div>
+            </article>
+
+            <article class="video-reel reveal-on-scroll">
+              <div class="video-reel-frame">
+                <video controls playsinline muted preload="none" poster="assets/video-spots/02-reklama-rolet.jpg" aria-label="Reklama rolet">
+                  <source src="assets/video-spots/02-reklama-rolet.mp4" type="video/mp4">
+                </video>
+                <span class="video-reel-index">05</span>
+              </div>
+              <div class="video-reel-caption"><h3>Reklama rolet</h3><span>Marka • Kampania</span></div>
+            </article>
           </div>
 
+          <div class="video-slider-controls" aria-label="Sterowanie sliderem wideo">
+            <div class="video-slider-count" aria-live="polite" aria-atomic="true">
+              <strong data-video-current>01</strong><span>/ 05</span>
+            </div>
+
+            <div class="video-slider-dots" aria-label="Wybierz film">
+              <button class="is-active" type="button" data-video-slide="0" aria-label="Pokaż film: Spot HARVO" aria-current="true"></button>
+              <button type="button" data-video-slide="1" aria-label="Pokaż film: Prezentacja strony"></button>
+              <button type="button" data-video-slide="2" aria-label="Pokaż film: Spot ArtPawilony"></button>
+              <button type="button" data-video-slide="3" aria-label="Pokaż film: Reklama biżuterii"></button>
+              <button type="button" data-video-slide="4" aria-label="Pokaż film: Reklama rolet"></button>
+            </div>
+
+            <div class="video-slider-arrows">
+              <button type="button" data-video-prev aria-label="Poprzedni film" disabled>←</button>
+              <button type="button" data-video-next aria-label="Następny film">→</button>
+            </div>
+          </div>
+
+          <p class="video-slider-hint" id="video-slider-hint"><span aria-hidden="true">↔</span> Przesuń, aby zobaczyć więcej</p>
           <p class="video-portfolio-note reveal-on-scroll"><span>05</span> krótkich form, które pokazują markę w ruchu.</p>
         </div>
       </section>
@@ -947,6 +974,6 @@
       <a href="polityka-prywatnosci.html">Polityka prywatności</a>
     </footer>
 
-    <script src="script.js?v=20260718"></script>
+    <script src="script.js?v=20260720"></script>
   </body>
 </html>
