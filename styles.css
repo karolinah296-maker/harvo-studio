@@ -3554,7 +3554,7 @@ a {
 
 .portfolio-preview-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(28px, 3.4vw, 48px);
   margin-top: 54px;
 }
@@ -3579,6 +3579,22 @@ a {
 
 .portfolio-preview-grid .preview-device-card:nth-child(4) {
   transition-delay: 360ms;
+}
+
+.portfolio-preview-grid .preview-device-card:nth-child(5) {
+  transition-delay: 480ms;
+}
+
+.preview-device-card--featured {
+  grid-column: span 2;
+}
+
+.preview-device-card--featured .device-pair {
+  min-height: clamp(286px, 27vw, 420px);
+}
+
+.preview-device-card--featured h3 {
+  font-size: clamp(22px, 1.8vw, 30px);
 }
 
 .preview-device-card h3 {
@@ -7402,6 +7418,11 @@ a {
   --case-accent-2: rgba(255, 182, 77, 0.18);
 }
 
+.case-forma {
+  --case-accent: rgba(134, 93, 54, 0.34);
+  --case-accent-2: rgba(200, 163, 106, 0.22);
+}
+
 .case-info {
   position: relative;
   z-index: 4;
@@ -8176,6 +8197,14 @@ a {
     grid-template-columns: 1fr;
     margin-top: 46px;
     gap: 44px;
+  }
+
+  .preview-device-card--featured {
+    grid-column: auto;
+  }
+
+  .preview-device-card--featured .device-pair {
+    min-height: clamp(250px, 70vw, 390px);
   }
 
   .device-pair {
