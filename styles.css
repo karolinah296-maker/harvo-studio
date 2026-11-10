@@ -15380,3 +15380,258 @@ main :where(h1, h2, h3, h4, h5, h6) {
     border-top-color: rgba(255, 248, 239, 0.12);
   }
 }
+
+/* Portfolio: clean three-column device grid */
+.portfolio-reference-layout {
+  padding: clamp(82px, 8vw, 132px) 0;
+  background: #fff;
+}
+
+.portfolio-reference-layout::before {
+  display: none;
+}
+
+.portfolio-reference-layout .portfolio-teaser-inner {
+  width: min(calc(100% - 64px), 1720px);
+}
+
+.portfolio-reference-layout .portfolio-teaser-copy {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px 48px;
+  align-items: center;
+}
+
+.portfolio-reference-layout .portfolio-teaser-copy h2 {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: clamp(44px, 4.5vw, 76px);
+  font-weight: 600;
+}
+
+.portfolio-reference-layout .portfolio-teaser-copy p {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 620px;
+  color: rgba(17, 16, 20, 0.58);
+  font-size: 18px;
+}
+
+.portfolio-reference-layout .button-secondary {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  margin: 0;
+  background: #111014;
+  color: #fff;
+}
+
+.portfolio-reference-layout .portfolio-preview-grid,
+.portfolio-reference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(48px, 4.6vw, 86px) clamp(30px, 3.4vw, 64px);
+}
+
+.portfolio-reference-layout .portfolio-preview-grid {
+  margin-top: clamp(58px, 6vw, 94px);
+}
+
+.portfolio-reference-layout .preview-device-card:nth-child(n + 4) {
+  display: none;
+}
+
+.portfolio-reference-layout .preview-label {
+  display: none;
+}
+
+.portfolio-reference-layout .preview-device-card,
+.portfolio-reference-card {
+  color: #09090b;
+  text-align: center;
+  text-decoration: none;
+}
+
+.portfolio-reference-layout .device-pair,
+.portfolio-reference-card .device-pair {
+  min-height: clamp(230px, 24vw, 380px);
+  padding: 12px 5% 26px;
+  perspective: none;
+}
+
+.portfolio-reference-layout .device-pair .laptop-device,
+.portfolio-reference-card .device-pair .laptop-device {
+  width: 94%;
+  margin: 0 auto;
+  transform: none;
+}
+
+.portfolio-reference-layout .device-pair .phone-device,
+.portfolio-reference-card .device-pair .phone-device {
+  right: 0;
+  bottom: 6%;
+  left: auto;
+  width: 23%;
+  min-width: 70px;
+  transform: none;
+  animation: none;
+}
+
+.portfolio-reference-layout .device-screen img,
+.portfolio-reference-card .device-screen img {
+  height: 100%;
+  object-position: top center;
+  transform: none;
+}
+
+.portfolio-reference-layout .preview-device-card:hover .device-screen img,
+.portfolio-reference-card:hover .device-screen img {
+  transform: scale(1.025);
+}
+
+.portfolio-reference-layout .preview-device-card h3,
+.portfolio-reference-card h2 {
+  max-width: 520px;
+  margin: 18px auto 0;
+  color: #09090b;
+  font-family: var(--font-heading) !important;
+  font-size: clamp(21px, 1.55vw, 29px);
+  font-weight: 750;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.portfolio-page .portfolio-hero {
+  padding: 170px 0 70px;
+  background: #fff;
+  color: #09090b;
+}
+
+.portfolio-page .portfolio-hero::before {
+  display: none;
+}
+
+.portfolio-page .portfolio-hero-inner {
+  width: min(calc(100% - 48px), 1040px);
+  text-align: center;
+}
+
+.portfolio-page .portfolio-hero-inner > span {
+  color: var(--pink);
+}
+
+.portfolio-page .portfolio-hero h1 {
+  max-width: none;
+  margin-top: 18px;
+  font-size: clamp(54px, 6vw, 96px);
+  font-weight: 650;
+  line-height: 1;
+}
+
+.portfolio-page .portfolio-hero p {
+  max-width: 720px;
+  margin: 24px auto 0;
+  color: rgba(17, 16, 20, 0.6);
+}
+
+.portfolio-reference-gallery {
+  padding: 22px 32px clamp(96px, 9vw, 150px);
+  background: #fff;
+}
+
+.portfolio-reference-grid {
+  width: min(100%, 1720px);
+  margin: 0 auto;
+}
+
+.portfolio-reference-card {
+  scroll-margin-top: 120px;
+}
+
+.portfolio-reference-card.is-visible .phone-device {
+  animation: none;
+}
+
+.portfolio-page .portfolio-legacy {
+  display: none !important;
+}
+
+@media (max-width: 1100px) {
+  .portfolio-reference-layout .portfolio-preview-grid,
+  .portfolio-reference-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-reference-layout .device-pair,
+  .portfolio-reference-card .device-pair {
+    min-height: clamp(260px, 36vw, 390px);
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-reference-layout {
+    padding: 72px 0 86px;
+  }
+
+  .portfolio-reference-layout .portfolio-teaser-inner {
+    width: min(calc(100% - 32px), 1720px);
+  }
+
+  .portfolio-reference-layout .portfolio-teaser-copy {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .portfolio-reference-layout .portfolio-teaser-copy h2 {
+    font-size: clamp(42px, 14vw, 60px);
+  }
+
+  .portfolio-reference-layout .portfolio-teaser-copy p {
+    font-size: 16px;
+  }
+
+  .portfolio-reference-layout .button-secondary {
+    margin-top: 8px;
+  }
+
+  .portfolio-reference-layout .portfolio-preview-grid,
+  .portfolio-reference-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .portfolio-reference-layout .portfolio-preview-grid {
+    margin-top: 56px;
+  }
+
+  .portfolio-reference-layout .device-pair,
+  .portfolio-reference-card .device-pair {
+    min-height: clamp(250px, 75vw, 360px);
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+
+  .portfolio-reference-layout .preview-device-card h3,
+  .portfolio-reference-card h2 {
+    margin-top: 12px;
+    font-size: 22px;
+  }
+
+  .portfolio-page .portfolio-hero {
+    padding: 132px 0 54px;
+  }
+
+  .portfolio-page .portfolio-hero h1 {
+    font-size: clamp(50px, 16vw, 70px);
+  }
+
+  .portfolio-page .portfolio-hero p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .portfolio-reference-gallery {
+    padding: 12px 16px 94px;
+  }
+}
