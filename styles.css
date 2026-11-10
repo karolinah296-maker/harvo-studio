@@ -3780,7 +3780,8 @@ a {
   object-position: center;
 }
 
-.ecomplex-hero-screen img {
+.ecomplex-hero-screen img,
+.malbud-hero-screen img {
   height: 100%;
   object-position: left center;
   transform: translateY(0) scale(1.01);
@@ -3792,7 +3793,8 @@ a {
 }
 
 .preview-device-card:hover .ecomplex-hero-screen img,
-.portfolio-case:hover .ecomplex-hero-screen img {
+.portfolio-case:hover .ecomplex-hero-screen img,
+.preview-device-card:hover .malbud-hero-screen img {
   transform: translateY(0) scale(1.045);
 }
 
