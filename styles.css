@@ -15483,6 +15483,11 @@ main :where(h1, h2, h3, h4, h5, h6) {
   transform: none;
 }
 
+.portfolio-reference-layout :is(.malbud-hero-screen, .gcs-hero-screen, .ecomplex-hero-screen, .lumex-hero-screen) img,
+.portfolio-reference-card :is(.malbud-hero-screen, .gcs-hero-screen, .ecomplex-hero-screen, .lumex-hero-screen) img {
+  object-position: left top;
+}
+
 .portfolio-reference-layout .preview-device-card:hover .device-screen img,
 .portfolio-reference-card:hover .device-screen img {
   transform: scale(1.025);
@@ -15501,7 +15506,7 @@ main :where(h1, h2, h3, h4, h5, h6) {
 }
 
 .portfolio-page .portfolio-hero {
-  padding: 170px 0 70px;
+  padding: 132px 0 38px;
   background: #fff;
   color: #09090b;
 }
@@ -15619,7 +15624,7 @@ main :where(h1, h2, h3, h4, h5, h6) {
   }
 
   .portfolio-page .portfolio-hero {
-    padding: 132px 0 54px;
+    padding: 112px 0 34px;
   }
 
   .portfolio-page .portfolio-hero h1 {
