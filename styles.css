@@ -15483,8 +15483,8 @@ main :where(h1, h2, h3, h4, h5, h6) {
   transform: none;
 }
 
-.portfolio-reference-layout :is(.malbud-hero-screen, .gcs-hero-screen, .ecomplex-hero-screen, .lumex-hero-screen) img,
-.portfolio-reference-card :is(.malbud-hero-screen, .gcs-hero-screen, .ecomplex-hero-screen, .lumex-hero-screen) img {
+.portfolio-reference-layout :is(.malbud-hero-screen, .gcs-hero-screen, .seltrans-hero-screen, .ecomplex-hero-screen, .lumex-hero-screen) img,
+.portfolio-reference-card :is(.malbud-hero-screen, .gcs-hero-screen, .seltrans-hero-screen, .ecomplex-hero-screen, .lumex-hero-screen) img {
   object-position: left top;
 }
 
