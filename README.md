@@ -15,7 +15,6 @@ Statyczna strona internetowa Harvo Studio przygotowana do publikacji na Netlify.
 ## Ważne pliki
 
 - `index.html` - strona główna
-- `oferta.html` - oferta i pakiety
 - `portfolio.html` - portfolio
 - `dziekuje.html` - strona po wysłaniu formularza
 - `netlify.toml` - konfiguracja Netlify

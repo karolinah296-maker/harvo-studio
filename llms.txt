@@ -17,12 +17,6 @@ Harvo Studio projektuje nowoczesne strony internetowe i landing page dla firm, u
 
 Harvo Studio pracuje lokalnie i zdalnie. Obsługiwane lokalizacje: Jarosław, Rzeszów, Przeworsk, Łańcut, Podkarpacie oraz cała Polska.
 
-## Pakiety
-
-- START Landing page: od 1699 zł brutto
-- BIZNES Strona firmowa: od 3690 zł brutto
-- PREMIUM Rozbudowana strona: od 5990 zł brutto
-
 ## Kontakt
 
 - E-mail: kontakt@harvostudio.pl
@@ -32,5 +26,4 @@ Harvo Studio pracuje lokalnie i zdalnie. Obsługiwane lokalizacje: Jarosław, Rz
 ## Najważniejsze strony
 
 - Strona główna: https://harvostudio.pl/
-- Oferta: https://harvostudio.pl/oferta.html
 - Portfolio: https://harvostudio.pl/portfolio.html
