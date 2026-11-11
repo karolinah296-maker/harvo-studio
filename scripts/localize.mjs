@@ -129,8 +129,10 @@ const localizeHtml = (html, language, translations, filename) => {
     .replace(/(href|src)="assets\//g, '$1="../assets/')
     .replace('href="styles.css"', 'href="../styles.css"')
     .replace(/src="script\.js(\?[^\"]*)?"/g, 'src="../script.js$1"')
-    .replace(/action="\/dziekuje"/g, `action="/${language}/dziekuje.html"`)
+    .replace(/action="\/dziekuje(?:\.html)?"/g, `action="/${language}/dziekuje.html"`)
     .replace(/https:\/\/harvostudio\.pl\/(?!assets)/g, `https://harvostudio.pl/${language}/`);
+
+  output = output.replace(/\s*<link rel="alternate" hreflang="[^"]+" href="[^"]+" \/>/g, "");
 
   output = output.replace(/<span class="language-switcher"([\s\S]*?)<\/span>/, (switcher) => {
     return switcher
@@ -145,6 +147,12 @@ const localizeHtml = (html, language, translations, filename) => {
       .replace(/>For whom</g, ">Industries<")
       .replace('<span class="title-line">I create websites</span>\n              <span class="title-line">internet</span>\n              <span class="title-line title-line-last">For <span class="title-gradient">construction industry</span></span>', '<span class="title-line">I design websites</span>\n              <span class="title-line">for ambitious</span>\n              <span class="title-line title-line-last"><span class="title-gradient">construction companies</span></span>')
       .replace(/>DOOR</g, ">DOORS<");
+  }
+  if (language === "de") {
+    output = output
+      .replace('<span class="title-line">Ich erstelle Websites</span>\n              <span class="title-line">Internet</span>\n              <span class="title-line title-line-last">Für <span class="title-gradient">Bauindustrie</span></span>', '<span class="title-line">Ich gestalte Websites</span>\n              <span class="title-line">für ambitionierte</span>\n              <span class="title-line title-line-last"><span class="title-gradient">Bauunternehmen</span></span>')
+      .replace(/>TÜR</g, ">TÜREN<")
+      .replace(/>Heim</g, ">Startseite<");
   }
 
   const canonicalPath = filename === "index.html" ? "" : filename.replace(/\.html$/, "");
