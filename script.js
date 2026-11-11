@@ -1,10 +1,17 @@
 const siteHeader = document.querySelector(".site-header");
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const interfaceLanguage = document.documentElement.lang || "pl";
+const interfaceCopy = {
+  pl: { open: "Otwórz menu", close: "Zamknij menu", show: "Zobacz zakres", hide: "Ukryj zakres" },
+  en: { open: "Open menu", close: "Close menu", show: "View details", hide: "Hide details" },
+  de: { open: "Menü öffnen", close: "Menü schließen", show: "Details anzeigen", hide: "Details ausblenden" }
+};
+const ui = interfaceCopy[interfaceLanguage] || interfaceCopy.pl;
 
 const closeMobileMenu = () => {
   siteHeader?.classList.remove("menu-open");
   mobileMenuToggle?.setAttribute("aria-expanded", "false");
-  mobileMenuToggle?.setAttribute("aria-label", "Otwórz menu");
+  mobileMenuToggle?.setAttribute("aria-label", ui.open);
 };
 
 const updateHeader = () => {
@@ -21,7 +28,7 @@ window.addEventListener("scroll", updateHeader, { passive: true });
 mobileMenuToggle?.addEventListener("click", () => {
   const isOpen = siteHeader?.classList.toggle("menu-open");
   mobileMenuToggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
-  mobileMenuToggle.setAttribute("aria-label", isOpen ? "Zamknij menu" : "Otwórz menu");
+  mobileMenuToggle.setAttribute("aria-label", isOpen ? ui.close : ui.open);
 });
 
 siteHeader?.querySelectorAll(".nav-links a").forEach((link) => {
@@ -155,7 +162,7 @@ const syncExpanderState = (expander) => {
   const label = summary?.querySelector("[data-toggle-label]");
 
   summary?.setAttribute("aria-expanded", String(expander.open));
-  if (label) label.textContent = expander.open ? "Ukryj zakres" : "Zobacz zakres";
+  if (label) label.textContent = expander.open ? ui.hide : ui.show;
 };
 
 accessibleExpanders.forEach((expander) => {
